@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-   <title>MILL Module &gt; Creating Machining Operations &gt; Machine &gt; Machine Setup</title>
+   <title>MILL Module &gt; Creating Machining Operations &gt; Machine &gt; Manual Definition</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -89,7 +89,7 @@
 <body>
 
 
-<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Manual Definition</span></h1>
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Manual Definition, Machine Tool Setup</span></h1>
 </div>
 <div id="idheader">
 <div id="idheaderbg">
@@ -101,7 +101,7 @@
       
       MILL Module &gt; <a href="creatingmachiningoperations.html">Creating Machining Operations</a> &gt; <a href="machine-setup.html">Machine</a>&nbsp;&gt;</p>
    
-      <h1 class="p_Heading1"><span class="f_Heading1">Manual Definition</span></h1>
+      <h1 class="p_Heading1"><span class="f_Heading1">Manual Definition, Machine Tool Setup</span></h1>
 
     </td>
     <td class="topichead" id="idnav">
@@ -223,9 +223,13 @@ For a <span class="f_BoldKeyword">Head-Head</span> machining configuration, the 
 <p class="p_Normal">Select from the list of <span class="f_BoldKeyword">5th Rotary Axis Angle Limits</span> depending on your machine tool. &nbsp;Select <span class="f_BoldKeyword">User Defined Limits</span> to activate the <span class="f_BoldKeyword">Min</span> and <span class="f_BoldKeyword">Max</span> input fields to enter your machine tool's limits (in degrees).</p>
 <p class="p_BoldParameter"><span class="f_BoldParameter">Rotary Axis Limits (In Degrees)</span></p>
 <p class="p_Normal">You have chosen <span class="f_BoldKeyword">User Defined</span> <span class="f_BoldKeyword">Limits</span> for the <span class="f_BoldKeyword">Angle Limits</span> of the 5th axis of your <span class="f_BoldKeyword">Machine Tool</span>. &nbsp;Enter here the <span class="f_BoldKeyword">Minimum Angle Limit</span> in degrees.</p>
+<p class="p_BoldParameter"><span class="f_BoldParameter">Use as the Rotation Axis for 4 Axis Machining Operations</span></p>
+<p class="p_Normal">With the <span class="f_BoldKeyword">Machine Type</span> set to <span class="f_BoldKeyword">5 Axis</span>, you can check this box to set the <span class="f_BoldKeyword">5th Axis (Secondary Axis)</span> to be the 4th rotary axis. This allows you to use the <span class="f_BoldKeyword">5 Axis</span> operations (except for <span class="f_BoldKeyword">5 Axis Drive Curve</span>) in <span class="f_BoldKeyword">4 Axis</span> mode. Check this box and then select <span class="f_BoldKeyword">4 Axis</span> from the <span class="f_BoldKeyword">Cut Parameters</span> tab of the <span class="f_BoldKeyword">5 Axis</span> operation.</p>
 <p class="p_BoldParameter"><span class="f_BoldParameter">Gage Length</span></p>
 <p class="p_Normal">For 5 axis toolpath computation, this value specifies the distance from the pivot point to the spindle face. &nbsp;When set to a non-zero value, the system automatically adds the tool length to this value to compute the <span class="f_BoldKeyword">Gage Length</span>.</p>
 <div class="p_Normal" style="text-align: center;"><div style="margin:0 auto 0 auto;width:144px"><img alt="Gage Length" title="Gage Length" width="144" height="132" style="width:144px;height:132px;border:none" src="doc_filesimage158-snall.png"/><p style="text-align:center"><span class="f_ImageCaption">Gage Length</span></p></div></div>
+<p class="p_BoldParameter"><span class="f_BoldParameter">Use as the Rotation Axis for 4 Axis Machining Operations</span></p>
+<p class="p_Normal">With the <span class="f_BoldKeyword">Machine Type</span> set to <span class="f_BoldKeyword">5 Axis</span>, you can check this box to set the <span class="f_BoldKeyword">5th Axis (Secondary Axis)</span> to be the 4th rotary axis. This allows you to use the <span class="f_BoldKeyword">5 Axis</span> operations (except for <span class="f_BoldKeyword">5 Axis Drive Curve</span>) in <span class="f_BoldKeyword">4 Axis</span> mode. Check this box and then select <span class="f_BoldKeyword">4 Axis</span> from the <span class="f_BoldKeyword">Cut Parameters</span> tab of the <span class="f_BoldKeyword">5 Axis</span> operation.</p>
 </td>
 </tr>
 </table>
@@ -277,9 +281,6 @@ For a <span class="f_BoldKeyword">Head-Head</span> machining configuration, the 
   });
 
 if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
-var baseurl = document.URL.substring(0,document.URL.lastIndexOf("/")+1); 
-$('#idcontent').append('<p class="help-url"><b>URL of this topic:<br /></b><a href="'+baseurl+'index.html' +
-'?manualdefinition.html" target="_top">'+baseurl+'index.html?manualdefinition.html</a></p>');
 
 </script>
 <script type="text/javascript">

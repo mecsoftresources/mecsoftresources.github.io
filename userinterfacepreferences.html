@@ -125,7 +125,7 @@
 <p class="p_Normal">&nbsp;</p>
 <div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A1_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1','TOGGLE0186A1_ICON')">Dialog Box: CAM Preferences &gt; User Interface</a></span></td></tr></table></div><div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="width:100%; border:none; border-spacing:0;">
 <tr>
-<td style="vertical-align:top; padding:0; border:none"><div class="p_Normal"><div style="margin:0;width:545px"><img alt="Dialog Box: CAM Preferences &gt; User Interface" title="Dialog Box: CAM Preferences &gt; User Interface" width="545" height="669" style="width:545px;height:669px;border:none" src="preferences-ui-2020.png"/><p style="text-align:center"><span class="f_ImageCaption">Dialog Box: CAM Preferences &gt; User Interface</span></p></div></div>
+<td style="vertical-align:top; padding:0; border:none"><div class="p_Normal"><div style="margin:0;width:545px"><img alt="Dialog Box: CAM Preferences &gt; User Interface" title="Dialog Box: CAM Preferences &gt; User Interface" width="545" height="696" style="width:545px;height:696px;border:none" src="preferences-ui-2020.png"/><p style="text-align:center"><span class="f_ImageCaption">Dialog Box: CAM Preferences &gt; User Interface</span></p></div></div>
 </td>
 </tr>
 </table>
@@ -188,6 +188,8 @@
 </tr>
 </table>
 </div>
+<p class="p_BoldParameter"><span class="f_BoldParameter">Show Tool Replacement Dialog</span></p>
+<p class="p_Normal">When you open a file that contains tool(s) whose names match a tool that is currently loaded, a dialog asks if you wish to replace the currently loaded tools with the tools from the file you are opening. You can check this box to replace tools by default and stop the dialog from displaying.</p>
 </td>
 </tr>
 </table>
@@ -254,7 +256,7 @@
 <p class="p_Normal">Check this box if you wish to always load CAM Preferences from the file you are opening. &nbsp;Remember, however, that your current settings including your selected post is subject to be being changed.</p>
 <p class="p_BoldParameter"><span class="f_BoldParameter">Always save current preferences to file on file save</span></p>
 <p class="p_Normal">Check this box if you wish to always save the current CAM preferences to the file on file save. &nbsp;Remember, however, that your current settings including your currently selected post will replace those preferences that were in the current file originally.</p>
-<p class="p_BoldParameter"><span class="f_BoldParameter">Always save settings to registry on exit</span></p>
+<p class="p_BoldParameter"><span class="f_BoldParameter">Always save current preferences to registry on exit</span></p>
 <p class="p_Normal">Check this box if you wish to always save the current CAM preferences to the Windows registry when you exit your MecSoft CAM plugin. &nbsp;This will ensure that your current CAM settings will always be used when starting a new file.</p>
 <p class="p_BoldParameter"><span class="f_BoldParameter">Save Current Preferences to Registry</span></p>
 <p class="p_Normal">If you have your preferences set the way you want them and do not want them top change, select this button to save the current preferences to your Windows registry. &nbsp;Doing this will force them to be loaded when you create new files.</p>
@@ -292,9 +294,6 @@
   });
 
 if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
-var baseurl = document.URL.substring(0,document.URL.lastIndexOf("/")+1); 
-$('#idcontent').append('<p class="help-url"><b>URL of this topic:<br /></b><a href="'+baseurl+'index.html' +
-'?userinterfacepreferences.html" target="_top">'+baseurl+'index.html?userinterfacepreferences.html</a></p>');
 
 </script>
 <script type="text/javascript">

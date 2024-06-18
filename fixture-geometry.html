@@ -198,6 +198,8 @@
 <p class="p_Normal">Pick this button to <span class="f_BoldKeyword">Remove</span> the currently <span class="f_BoldKeyword">Active</span> item from the <span class="f_BoldKeyword">Selected List</span>. &nbsp;The actual part geometry is not deleted.</p>
 <p class="p_BoldKeyword"><span class="f_BoldKeyword">Select Solid(s)</span></p>
 <p class="p_Normal">Pick this button and then select one or more polysurface solids and then right-click or press &lt;<span class="f_BoldKeyword">Enter</span>&gt; and they selections will be added to the <span class="f_BoldKeyword">Selected Machining Features</span> list of the <span class="f_BoldKeyword">Create Machining Fixture</span> dialog.</p>
+<p class="p_BoldParameter"><span class="f_BoldParameter">Fixture Clearance Distance</span></p>
+<p class="p_Normal">The cutting tool will stay away from any fixture geometry by this distance.</p>
 </td>
 </tr>
 </table>
@@ -232,9 +234,6 @@
   });
 
 if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
-var baseurl = document.URL.substring(0,document.URL.lastIndexOf("/")+1); 
-$('#idcontent').append('<p class="help-url"><b>URL of this topic:<br /></b><a href="'+baseurl+'index.html' +
-'?fixture-geometry.html" target="_top">'+baseurl+'index.html?fixture-geometry.html</a></p>');
 
 </script>
 <script type="text/javascript">
