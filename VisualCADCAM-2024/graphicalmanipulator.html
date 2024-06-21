@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>VisualCAD &gt; The Ribbon Bar &gt; Transform &gt; Graphical Manipulator</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Graphical Manipulator,Rotate,Rotate using Graphical Manipulator,Scale,Scale Using Graphical Manipulator,Transform,Transform Graphical Manipulator" />
+   <meta name="description" content="Displays the graphical manipulator widget on selected object(s) facilitating move, scale, and rotate transformations around the graphical manipulator origin. &nbsp;This can be..." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #3D78AF; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "graphicalmanipulator.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Graphical Manipulator</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?graphicalmanipulator.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      VisualCAD &gt; <a href="geometryribbonbar.html">The Ribbon Bar</a> &gt; <a href="transformribbonbar.html">Transform</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1"><span class="f_Heading1">Graphical Manipulator</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      <a href="javascript:HMToggleExpandAll(!HMAnyToggleOpen())" title="Click to open/close expanding sections"><span class="hmbtntoggle"></span></a>
+      <a href="transformobjectsalongpath.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="transformribbonbar.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="print_preview.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal"><img alt="Graphical Manipulator" title="Graphical Manipulator" width="575" height="131" style="float:left;margin:0 10px 0 0;width:575px;height:131px;border:none" src="doc_files_image086.png"/>Displays the graphical manipulator widget on selected object(s) facilitating move, scale, and rotate transformations around the graphical manipulator origin. &nbsp;This can be toggled on and off by selecting <span class="f_BoldKeyword">Manipulator</span> on the <span class="f_BoldKeyword">Status</span> bar.</p>
+<div style="text-align: center; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 0;"><table style="margin:0 auto; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; width:106px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="Graphical Manipulator On" title="Graphical Manipulator On" width="26" height="19" style="margin:0 auto 0 auto;width:26px;height:19px;border:none" src="doc_files_image232.jpg"/><br />
+<span class="f_ImageCaption">Manipulator</span><br />
+<span class="f_ImageCaption">On</span></p>
+</td>
+<td style="vertical-align:top; width:103px; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="Graphical Manipulator Off" title="Graphical Manipulator Off" width="26" height="18" style="margin:0 auto 0 auto;width:26px;height:18px;border:none" src="doc_files_image234.jpg"/><br />
+<span class="f_ImageCaption">Manipulator</span><br />
+<span class="f_ImageCaption">Off</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal" style="margin: 0 0 8px 7px;">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A1_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1','TOGGLE0186A1_ICON')">About the Graphical Manipulator</a></span></td></tr></table></div><div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><span class="f_BoldKeyword">Graphical Manipulator</span> can be used for graphical transform of objects by selecting the &nbsp;icon on the <span class="f_BoldKeyword">Status Toolbar</span>. This feature can be used to move or rotate objects. The orientation of the graphical manipulator is in the same orientation as the <span class="f_BoldKeyword">World Coordinate System</span> (<span class="f_BoldKeyword">WCS</span>). </p>
+<p class="p_Normal">The arrows displayed on the graphical manipulator can be selected and a numerical value placed to move the geometry in either X, Y or Z direction. Or the arrows can be selected and simply dragged in either the X, Y or Z direction. </p>
+<p class="p_Normal">To rotate the geometry, use the arcs on display of the graphical manipulator. The arcs displayed on the graphical manipulator can be selected and a numerical value placed to rotate the geometry in either X, Y or Z direction. Or the arcs can be selected and simply rotated by dragging with the left hold of mouse. </p>
+<p class="p_Normal"><span class="f_BoldKeyword">Graphical Manipulator</span> can also be enabled by selecting <span class="f_BoldKeyword">Transform</span> on the <span class="f_BoldKeyword">Menu</span> bar and then selecting <span class="f_BoldKeyword">Manipulator</span>.</p>
+<div class="p_Normal"><div style="margin:0;width:446px"><img alt="Graphical Manipulator" title="Graphical Manipulator" width="446" height="269" style="width:446px;height:269px;border:none" src="graphic-manipulator.png"/><p style="text-align:center"><span class="f_ImageCaption">Graphical Manipulator</span></p></div></div>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A2_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2','TOGGLE0186A2_ICON')">Command Prompts</a></span></td></tr></table></div><div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Manipulator:: Move/Rotate object(s). Enter when done. Esc/RButton to exit.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A3_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3','TOGGLE0186A3_ICON')">Basic Procedure</a></span></td></tr></table></div><div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 0;"><table style="border:none; border-spacing:0; border-collapse:collapse;">
+<tr>
+<td style="vertical-align:top; width:72px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:319px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">Screen Activity</span></p>
+</td>
+<td style="vertical-align:top; width:199px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">Comments</span></p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:72px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">Step 1</span></p>
+</td>
+<td style="vertical-align:top; width:319px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal">Select an object to manipulate.</p>
+</td>
+<td style="vertical-align:top; width:199px; padding:5px; border:solid thin #c0c0c0;"><br />
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:72px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">Step 2</span></p>
+</td>
+<td style="vertical-align:top; width:319px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal">Select <span class="f_BoldKeyword">Manipulator </span>from <a href="transformribbonbar.html" class="topiclink">Transform</a> menu or from the <a href="statustoolbar.html" class="topiclink">Status Toolbar</a>. to display the manipulator widget.</p>
+</td>
+<td style="vertical-align:top; width:199px; padding:5px; border:solid thin #c0c0c0;"><br />
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:72px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">Step 3</span></p>
+</td>
+<td style="vertical-align:top; width:319px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal">Left-click on one of the manipulator widgets. &nbsp;There are three for each axis. &nbsp;They are <span class="f_BoldKeyword">Scale</span>, <span class="f_BoldKeyword">Transform</span> and <span class="f_BoldKeyword">Rotate</span>. &nbsp;Refer to the illustration above.</p>
+</td>
+<td style="vertical-align:top; width:199px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:72px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;"><span style="font-weight: bold;">Step 4</span></p>
+</td>
+<td style="vertical-align:top; width:319px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal">Enter a value in the pop-up window and press <span class="f_BoldKeyword">ENTER</span>. &nbsp;Alternately you can drag the widget to dynamically transform the object.</p>
+</td>
+<td style="vertical-align:top; width:199px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; width:72px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:top; width:319px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal">Left click on the origin of the <span class="f_BoldKeyword">Manipulator</span> to display additional options. &nbsp;See below.</p>
+</td>
+<td style="vertical-align:top; width:199px; padding:5px; border:solid thin #c0c0c0;"><p class="p_Normal" style="text-align: center;">Optional</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A4_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4','TOGGLE0186A4_ICON')">Examples</a></span></td></tr></table></div><div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 0;"><table style="width:475px; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;">&nbsp;</p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator19" width="167" height="128" style="margin:0 auto 0 auto;width:167px;height:128px;border:none" src="graphic-manipulator19.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Original Geometry</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator2" width="198" height="133" style="margin:0 auto 0 auto;width:198px;height:133px;border:none" src="graphic-manipulator2.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator3" width="174" height="148" style="margin:0 auto 0 auto;width:174px;height:148px;border:none" src="graphic-manipulator3.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator4" width="161" height="122" style="margin:0 auto 0 auto;width:161px;height:122px;border:none" src="graphic-manipulator4.png"/></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Move 1&quot; along the positive Y Axis</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator5" width="156" height="128" style="margin:0 auto 0 auto;width:156px;height:128px;border:none" src="graphic-manipulator5.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator6" width="161" height="162" style="margin:0 auto 0 auto;width:161px;height:162px;border:none" src="graphic-manipulator6.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator7" width="162" height="127" style="margin:0 auto 0 auto;width:162px;height:127px;border:none" src="graphic-manipulator7.png"/></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Move 1&quot; along the positive Z Axis</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator8" width="173" height="133" style="margin:0 auto 0 auto;width:173px;height:133px;border:none" src="graphic-manipulator8.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator9" width="171" height="150" style="margin:0 auto 0 auto;width:171px;height:150px;border:none" src="graphic-manipulator9.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator10" width="164" height="159" style="margin:0 auto 0 auto;width:164px;height:159px;border:none" src="graphic-manipulator10.png"/></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Rotate 45 degrees about the positive X Axis</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator11" width="157" height="131" style="margin:0 auto 0 auto;width:157px;height:131px;border:none" src="graphic-manipulator11.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator12" width="167" height="148" style="margin:0 auto 0 auto;width:167px;height:148px;border:none" src="graphic-manipulator12.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator13" width="166" height="150" style="margin:0 auto 0 auto;width:166px;height:150px;border:none" src="graphic-manipulator13.png"/></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Scale by 2 about the positive Z Axis</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator14" width="160" height="133" style="margin:0 auto 0 auto;width:160px;height:133px;border:none" src="graphic-manipulator14.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator15" width="188" height="157" style="margin:0 auto 0 auto;width:188px;height:157px;border:none" src="graphic-manipulator15.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal" style="text-align: center;"><img alt="graphic-manipulator16" width="179" height="153" style="margin:0 auto 0 auto;width:179px;height:153px;border:none" src="graphic-manipulator16.png"/></p>
+</td>
+</tr>
+<tr>
+<td colspan="3"  style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Scale by 2 about the positive Y Axis</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 0;"><table style="width:475px; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal"><img alt="graphic-manipulator17" width="284" height="162" style="margin:0;width:284px;height:162px;border:none" src="graphic-manipulator17.png"/></p>
+</td>
+<td style="vertical-align:bottom; padding:0; border:none"><p class="p_Normal"><img alt="graphic-manipulator18" width="284" height="170" style="margin:0;width:284px;height:170px;border:none" src="graphic-manipulator18.png"/></p>
+</td>
+</tr>
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="text-align: center;">Scale by Dragging equal distance about the X Axis</p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A5_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A5','TOGGLE0186A5_ICON')">Graphical Manipulator options</a></span></td></tr></table></div><div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><span class="f_BoldKeyword">Graphical Manipulator</span> options can be invoked by left clicking on the origin of the manipulator.</p>
+<p class="p_Normal">This allows for the selection of additional manipulator options such as <span class="f_BoldKeyword">Set to World CSYS</span>, <span class="f_BoldKeyword">Set to CPlane CSYS</span>, <span class="f_BoldKeyword">Smooth Dragging</span>, <span class="f_BoldKeyword">Snappy Dragging</span> and <span class="f_BoldKeyword">Set Drag Strength&lt;100.000%&gt;</span></p>
+<p class="p_Normal">The below example shows the options after left click of mouse on origin of the manipulator.</p>
+<p class="p_Normal"><img alt="graphic-manipulator20" width="347" height="210" style="margin:0;width:347px;height:210px;border:none" src="graphic-manipulator20.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A6_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A6','TOGGLE0186A6_ICON')">Set to World CSYS</a></span></td></tr></table></div><div id="TOGGLE0186A6" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 80px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal" style="margin: 0 0 8px 8px;"><span style="font-weight: bold;">Set to World CSYS</span> - In the below example, the <span class="f_BoldKeyword">Graphical Manipulator</span> is set to the <span class="f_BoldKeyword">World Coordinate System</span> (<span class="f_BoldKeyword">WCS</span>).</p>
+<p class="p_Normal"><img alt="graphic-manipulator20b" width="262" height="162" style="margin:0;width:262px;height:162px;border:none" src="graphic-manipulator20b.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A7_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A7','TOGGLE0186A7_ICON')">Set to C-Plane CSYS</a></span></td></tr></table></div><div id="TOGGLE0186A7" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 80px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">This sets the Graphical Manipulator to the Construction Plane Coordinate System</p>
+<p class="p_Normal">In the below example, the C-Plane is set to 45 degrees on the X axis coordinate and the manipulator is also set to that CPlane. </p>
+<p class="p_Normal"><img alt="doc_files_image096" width="276" height="167" style="margin:0;width:276px;height:167px;border:none" src="doc_files_image096.jpg"/></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A8_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A8','TOGGLE0186A8_ICON')">Smooth Dragging</a></span></td></tr></table></div><div id="TOGGLE0186A8" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 80px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">This allows the Graphical Manipulator to glide freely when being manipulated.</p>
+<p class="p_Normal">In the below example, please note that the geometry is gliding freely in between cells.</p>
+<p class="p_Normal"><img alt="doc_files_image097" width="258" height="178" style="margin:0;width:258px;height:178px;border:none" src="doc_files_image097.jpg"/></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A9_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A9','TOGGLE0186A9_ICON')">Snappy Dragging</a></span></td></tr></table></div><div id="TOGGLE0186A9" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 80px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">This allows the Graphical Manipulator to move in increments by snapping from cell to cell for each move.</p>
+<p class="p_Normal">In the below example, please note that the geometry is snapping directly on to the cells </p>
+<p class="p_Normal"><img alt="doc_files_image098" width="243" height="176" style="margin:0;width:243px;height:176px;border:none" src="doc_files_image098.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186AA_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186AA','TOGGLE0186AA_ICON')">Set Drag Strength&lt;100.000%&gt;</a></span></td></tr></table></div><div id="TOGGLE0186AA" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 80px;"><table style="width:500px; border:none; border-spacing:0;">
+<tr>
+<td colspan="2"  style="vertical-align:top; padding:0; border:none"><p class="p_Normal">This value by default is set to 100%. This sets the percentage of the speed by which the <span class="f_BoldKeyword">Graphical Manipulator</span> moves when being dragged or rotated. The lower the value, the slower the speed.</p>
+<p class="p_Normal">In the below example the drag strength is set at 100%.</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="doc_files_image22" width="344" height="213" style="margin:0;width:344px;height:213px;border:none" src="doc_files_image22.png"/></p>
+</td>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="doc_files_image21" width="211" height="164" style="margin:0;width:211px;height:164px;border:none" src="doc_files_image21.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186AB_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186AB','TOGGLE0186AB_ICON')">Related Topics</a></span></td></tr></table></div><div id="TOGGLE0186AB" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><a href="transformribbonbar.html" class="topiclink">Transform Ribbon Bar</a></p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A1\',\'TOGGLE0186A1_ICON\')');
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A2\',\'TOGGLE0186A2_ICON\')');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A3\',\'TOGGLE0186A3_ICON\')');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A4\',\'TOGGLE0186A4_ICON\')');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A5\',\'TOGGLE0186A5_ICON\')');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A6_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A6\',\'TOGGLE0186A6_ICON\')');
+HMInitToggle('TOGGLE0186A6','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A7_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A7\',\'TOGGLE0186A7_ICON\')');
+HMInitToggle('TOGGLE0186A7','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A8_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A8\',\'TOGGLE0186A8_ICON\')');
+HMInitToggle('TOGGLE0186A8','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A9_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A9\',\'TOGGLE0186A9_ICON\')');
+HMInitToggle('TOGGLE0186A9','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186AA_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186AA\',\'TOGGLE0186AA_ICON\')');
+HMInitToggle('TOGGLE0186AA','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186AB_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186AB\',\'TOGGLE0186AB_ICON\')');
+HMInitToggle('TOGGLE0186AB','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+</html>

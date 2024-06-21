@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <title>MILL Module &gt; Post Processing Machining Operations &nbsp;&gt; Good Things to Know</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Algebraic Expressions,Cutter Compensation,Drill Cycles &amp; Indexed Machining,Tool Change Point,Tool Comments" />
+   <meta name="description" content="Here is a list of things you should know when posting G-Code using a customized post created from the Post-Processor Generator in VisualCAM." />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+   <link type="text/css" href="custom.css" rel="stylesheet" />
+
+   <style TYPE="text/css" media="screen"> 
+      html, body { margin:0; 
+        padding:0; 
+        background: #ffffff; 
+      } 
+      div#printheader { display: none; }
+      #idheader { 
+        width:100%; 
+        height:auto; 
+        padding: 0; 
+        margin: 0;
+        position: fixed;
+        top: 0;
+        z-index: 2;
+      } 
+      /* The "min-height" for "#idheader table" ensures that the (blue) header of the topic
+         has at least the same height as the header of the navigation panel left of it */
+      #idheader table { background: #3D78AF; min-height: 59px }             
+      #idheader h1 span { color: #FFF }     
+      #idnav {
+        text-align: right;
+        width: 126px;
+        vertical-align: middle;        
+      } 
+      #idnav a { text-decoration: none }
+      #idnav span {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        margin-left: 4px;
+        background:url('hm_webhelp_buttons_grey.png') top left no-repeat;
+      } 
+      #idnav a span {
+        background-image:url('hm_webhelp_buttons_white.png');
+      } 
+      #idnav a span:hover {
+        background-image:url('hm_webhelp_buttons_orange.png');
+      } 
+      #idnav span.hmbtnprev { background-position: 0 -32px }
+      #idnav span.hmbtnnext { background-position: -24px -32px }
+      #idnav span.hmbtntop  { background-position: -48px -32px }
+      #idnav span.hmbtntoggle  { width: 20px; background-position: -70px -32px }
+      #idnav span.hmbtnprint  { background-position: -88px -32px }
+
+      #callout-table, #overview-table {display:block; position:relative; top:0; left:0;}
+      #callout-icon {display:block; position:absolute; top:-11px; left:-11px;}
+      #callout-icon-flag {display:block; position:absolute; top:-11px; left:-8px;}
+      #callout-table a {text-decoration: none; color: blue;}
+      #callout-table a:visited {text-decoration: none; color: blue;}
+      #overview-table a {text-decoration: none; color: black;}
+      #overview-table a:visited {text-decoration: none; color: black;}
+      #callout-table a:hover, #overview-table a:hover {text-decoration: underline;}       
+      p.help-url { margin: 20px 0 5px 0; text-align: center; font-size: 80%; text-decoration: none }      
+      #switchtoggles { text-align: right; padding: 0 2px 0 0; font-size: 90%; } 
+      .sync-toc { color: #FFF; font-size: 8pt; font-weight: bold; display: none; }
+      .sync-toc a { color: #FFF; text-decoration: none; font-weight: bold;}
+      .sync-toc a:visited { color: #FFF; }
+      .sync-toc a:hover { text-decoration: underline; }
+      a.hmanchor { display: inline-block; margin-top: -4em; padding-top: 4em }	  
+   </style>
+   <style TYPE="text/css" media="print">
+      div#idheader, img.dropdown-toggle-icon, p.help-url { display:none } 
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript" src="helpman_topicinit.js"></script>
+
+   <script type="text/javascript">
+     HMSyncTOC("index.html", "about-the-ppg.html");
+   </script>
+   <script type="text/javascript" src="highlight.js"></script>
+   <script type="text/javascript">
+     $(document).ready(function(){highlight();});
+   </script>
+</head>
+<body>
+
+
+<div id="printheader"><h1 class="p_Heading1"><span class="f_Heading1">Good Things to Know</span></h1>
+</div>
+<div id="idheader">
+<div id="idheaderbg">
+<table style="width:100%;border:none;margin:0px;" cellspacing="0" cellpadding="0"> 
+  <tr>
+    <td class="topichead" style="text-align:left; vertical-align:bottom">
+      <p class="sync-toc">&lt;&lt; <a rel="nofollow" href="index.html?about-the-ppg.html" target="_top">Click to Display Table of Contents</a> &gt;&gt;</p>
+      <p class="crumbs"><b>Navigation:</b>&nbsp;
+      
+      MILL Module &gt; <a href="postprocessingmachiningoperation.html">Post Processing Machining Operations&nbsp;</a>&nbsp;&gt;</p>
+   
+      <h1 class="p_Heading1"><span class="f_Heading1">Good Things to Know</span></h1>
+
+    </td>
+    <td class="topichead" id="idnav">
+      <a href="javascript:HMToggleExpandAll(!HMAnyToggleOpen())" title="Click to open/close expanding sections"><span class="hmbtntoggle"></span></a>
+      <a href="print-media-archive.html" title="Previous Topic"><span class="hmbtnprev"></span></a>
+      <a href="postprocessingmachiningoperation.html" title="Parent Chapter"><span class="hmbtntop"></span></a>
+      <a href="use-legacy-post.html" title="Next Topic"><span class="hmbtnnext"></span></a>
+      
+    </td>
+  </tr>  
+</table>
+</div>
+</div>  
+
+<div id="idcontent"><div id="innerdiv">
+<!-- Ask Internet Explorer 6.users to update their obsolete and dangerous browser --> 
+<!--[if lt IE 7]><div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." /></a></div><![endif]-->
+
+<!--ZOOMRESTART-->
+<p class="p_Normal">Here is a list of things you should know when posting G-Code using a customized post created from the <span class="f_BoldKeyword">Post-Processor Generator</span> in <span class="f_BoldKeyword">VisualCAM</span>.</p>
+<p class="p_Normal">&nbsp;</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A1_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A1','TOGGLE0186A1_ICON')">Algebraic Expressions when Posting</a></span></td></tr></table></div><div id="TOGGLE0186A1" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">The <span class="f_BoldKeyword">Post Process Generator</span> supports <span class="f_BoldKeyword">Algebraic Expressions</span> in all input fields.</p>
+<p class="p_Normal">Here are some guidelines for using expressions:</p>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_Numbered">Each expression should be placed in ‘</span><span class="f_BoldKeyword">E{</span><span class="f_Numbered">’, ‘</span><span class="f_BoldKeyword">E}</span><span class="f_Numbered">’ tags.</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_Numbered">In expression can be used next operations:  </span><span class="f_BoldKeyword">-</span><span class="f_Numbered">,</span><span class="f_BoldKeyword">+</span><span class="f_Numbered">,</span><span class="f_BoldKeyword">/</span><span class="f_Numbered">,</span><span class="f_BoldKeyword">*</span><span class="f_Numbered">,</span><span class="f_BoldKeyword">^</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">3.</span><span class="f_Numbered">Negative values should be placed in parentheses '</span><span class="f_BoldKeyword">( &nbsp;)</span><span class="f_Numbered">’</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">4.</span><span class="f_Numbered">Expression parts can be placed in parentheses '</span><span class="f_BoldKeyword">( &nbsp;)</span><span class="f_Numbered">’</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">5.</span><span class="f_Numbered">Floating point numbers should be delimited by point symbol, use </span><span class="f_BoldKeyword">0.xx</span><span class="f_Numbered"> in case of fractional numbers</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">6.</span><span class="f_Numbered">Expressions can contain spaces in any place, spaces will be removed while parsing</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">7.</span><span class="f_Numbered">Numbers in [</span><span class="f_BoldKeyword">-0.9</span><span class="f_Numbered">; </span><span class="f_BoldKeyword">0.9</span><span class="f_Numbered">] can be written as [</span><span class="f_BoldKeyword">-.9</span><span class="f_Numbered">;</span><span class="f_BoldKeyword"> .9</span><span class="f_Numbered">]</span></p><p class="p_Normal"><span style="font-weight: bold;">Examples:</span></p>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:24px;margin-left:-24px">&#8226;</span><span class="f_BoldKeyword">E{ ([SOME_VAR1]/2 + ([SOME_VAR]*(-3.2)) )^3 E}</span><span class="f_Numbered"> &nbsp;</span></p><p class="p_Normal" style="text-indent: 0; padding-left: 48px; margin-left: 0;"><span class="f_Numbered" style="font-family: Arial,'Lucida Sans Unicode','Lucida Grande','Lucida Sans';display:inline-block;width:24px;margin-left:-24px">&#8226;</span><span class="f_BoldKeyword">E{[SOME_VAR1] + .3 E}</span> SOME_TEXT  <span class="f_BoldKeyword">E{ &nbsp;[SOME_VAR1] *(-1) E} </span> </p></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A2_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A2','TOGGLE0186A2_ICON')">Posting Drill Cycles &amp; Indexed Machining</a></span></td></tr></table></div><div id="TOGGLE0186A2" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Drill cycles will be converted to simulated cycles (i.e., using linear motions) if the setup the drill cycles appear in is not aligned with the machine Z axis. &nbsp;This is done only when the machine has a head configuration defined and <span class="f_BoldKeyword">Output all coordinates in local Setup Coordinate System</span><span class="f_BoldParameter"> </span>is not checked. &nbsp;See <span class="f_BoldKeyword">Machine Tool Setup</span> for more information.</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A3_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A3','TOGGLE0186A3_ICON')">Posting Cutter Compensation (G40, G41, G42)</a></span></td></tr></table></div><div id="TOGGLE0186A3" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">All toolpaths except engraving are automatically compensated for the tool geometry.  <span class="f_BoldKeyword">Cutter compensation</span> is used typically to compensate for the difference in the dimensions of the actual cutter used in machining and the cutter used for programming in <span class="f_BoldKeyword">VisualCAM</span>. &nbsp;For example, if the cutter used in programming is 0.25 inches and due to tool wear the actual cutter is only 0.24 inches in size, you can compensate for this at the controller rather than having to re-program the operation in <span class="f_BoldKeyword">VisualCAM</span>. &nbsp;</p>
+<p class="p_Normal"><span class="f_BoldKeyword">Cutter compensation</span> is used extensively in production (high volume) machining where the machine operator can compensate for tool wear before having to stop and replace the tool or insert.</p>
+<p class="p_Normal"><span style="font-weight: bold;">In order to do this the user needs to do the following:</span></p>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_Numbered">Turn cutter compensation on in the operation to </span><span class="f_BoldKeyword">Auto/ON</span><span class="f_Numbered"> or </span><span class="f_BoldKeyword">CONTROL/ON</span><span class="f_Numbered">.</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_Numbered">Specify the cutter compensation value and the compensation register in the controller (the controller needs to be capable of doing this).</span></p><p class="p_Normal" style="text-indent: 0; padding-left: 48px; margin-left: 0;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">3.</span>Please make sure the post processor is configured to output cutter compensation. This is &nbsp;defined under the <span class="f_BoldKeyword">Cutter Compensation</span> section in the post processor generator. Most controllers expect an X &amp; Y motion on the same line as cutter compensation.</p><div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Cutter Compensation Left</p>
+<p class="p_Normal"><span style="font-size: 12px; color: #0000ff;">[SEQ_PRECHAR][SEQNUM] G41 [G_CODE] X[NEXT_NONMDL_X] Y[NEXT_NONMDL_Y] D[TOOL_CUTCOM_REG]</span></p>
+<p class="p_Normal">Cutter Compensation Right</p>
+<p class="p_Normal"><span style="font-size: 12px; color: #0000ff;">[SEQ_PRECHAR][SEQNUM] G42 [G_CODE] X[NEXT_NONMDL_X] Y[NEXT_NONMDL_Y] D[TOOL_CUTCOM_REG]</span></p>
+<p class="p_Normal">Cutter Compensation Off</p>
+<p class="p_Normal"><span style="font-size: 12px; color: #0000ff;">[SEQ_PRECHAR][SEQNUM] G40</span></p>
+<p class="p_Normal"><img alt="cutcom-ppg-dialog" width="713" height="420" style="margin:0;width:713px;height:420px;border:none" src="cutcom-ppg-dialog.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Normal"><span style="font-weight: bold;">A few things to watch out for:</span></p>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_BoldKeyword">Cutter compensation</span><span class="f_Numbered"> makes sense only in 2-1/2 axis operations. &nbsp;If you are using roughing (pocketing &amp; facing) the compensation will be turned on only in the final passes.</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_Numbered">Make sure you are using </span><span class="f_BoldKeyword">Climb</span><span class="f_Numbered"> or </span><span class="f_BoldKeyword">Conventional</span><span class="f_Numbered"> cut traversal in any of the methods that you want to turn compensation on.</span></p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="cutcom-toolpath-cut-parameters-tab" width="597" height="345" style="margin:0;width:597px;height:345px;border:none" src="cutcom-toolpath-cut-parameters-tab.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">3.</span><span class="f_Numbered">Make sure you have a linear motion for the controller to turn on the compensation for. &nbsp;If your first motion is an arc the controller will not be able to turn on the compensation. &nbsp;Thus, in </span><span class="f_BoldKeyword">2-1/2 axis profiling</span><span class="f_Numbered">, make sure there is a linear entry motion for the controller to be able to turn compensation on &amp; linear exit to turn off compensation.</span></p><p class="p_Normal">If you are looking to compensate for the full tool diameter, set <span class="f_BoldKeyword">Stock</span> = <span class="f_BoldKeyword">-0.125</span> under the cut parameters tab. (<span class="f_BoldKeyword">0.125</span> being the radius of the tool). This would generate the toolpath ON the curve. This would invalidate the simulation as the tool tip stays on the drive geometry.</p>
+<p class="p_Normal"><span style="font-weight: bold;">Note</span>: &nbsp;The <span class="f_BoldKeyword">Cutcom Register</span> is set under the <span class="f_BoldKeyword">Create/Select Tool</span> definition dialog.</p>
+<p class="p_Normal"><img alt="cutcom-register-create-select-tools-dialog" width="214" height="249" style="margin:0;width:214px;height:249px;border:none" src="cutcom-register-create-select-tools-dialog.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A4_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A4','TOGGLE0186A4_ICON')">Posting a Tool Change Point</a></span></td></tr></table></div><div id="TOGGLE0186A4" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">Implementing a <span class="f_BoldKeyword">Tool Change Point</span> can be useful. &nbsp;For example in 2 and 3 Axis, you may want to change tools manually between operations (i.e., your CNC machine does not have an automatic tool changer). &nbsp;Also in 4 Axis you may want to ensure the tool is moved to a save location prior to a table rotation. &nbsp;To output a <span class="f_BoldKeyword">Tool Change Point</span> to your posted g-code files, please do the following:</p>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A5_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A5','TOGGLE0186A5_ICON')">For 2 and 3 Axis Output</a></span></td></tr></table></div><div id="TOGGLE0186A5" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="width:100%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_Numbered">From the </span><span class="f_BoldKeyword">Machine Setup</span><span class="f_Numbered"> dialog (</span><span class="f_BoldKeyword">Program</span><span class="f_Numbered"> tab &gt; </span><span class="f_BoldKeyword">Machine</span><span class="f_Numbered"> &gt; </span><span class="f_BoldKeyword">General Parameters</span><span class="f_Numbered"> &gt; </span><span class="f_BoldKeyword">Tool Change Pt</span><span class="f_Numbered">), enter your required tool change point coordinates.</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">2.</span>For the sample code (shown at the end of this section) we entered the following values in the <span class="f_BoldKeyword">Machine Setup</span> dialog:<br />
+&nbsp;<br />
+<span style="font-size: 19px; color: #0000ff;">X: -4, Y: 0 Z: 0</span></p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="machine-tool-setup-dialog-tool-change-point" width="412" height="365" style="margin:0;width:412px;height:365px;border:none" src="machine-tool-setup-dialog-tool-change-point.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">3.</span>Edit your post processor by selecting <span class="f_BoldKeyword">Program</span> tab &gt; <span class="f_BoldKeyword">Post</span> &gt; <span class="f_BoldKeyword">Edit</span>.</p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="post-options-dialog" width="395" height="342" style="margin:0;width:395px;height:342px;border:none" src="post-options-dialog.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">4.</span>From the <span class="f_BoldKeyword">Post Process Generator</span> dialog, select the <span class="f_BoldKeyword">Tool Change</span> section from the left side of the dialog.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">5.</span>In the <span class="f_BoldKeyword">Tool Change Macro</span> block section, replace the first line of text with the following two lines of text at the top of the macro. &nbsp;<br />
+These two lines of text should precede the line that includes <span class="f_BoldKeyword">T[TOOL_NUM]</span> as shown in the examples below.<br />
+&nbsp;<br />
+<span style="font-size: 12px; color: #0000ff;">[SEQ_PRECHAR][SEQNUM][DELIMITER]G0 Z[TOOL_CHG_PT_Z]</span><br />
+<span style="font-size: 12px; color: #0000ff;">[SEQ_PRECHAR][SEQNUM][DELIMITER]G0 X[TOOL_CHG_PT_X] Y[TOOL_CHG_PT_Y]</span><br />
+<span style="font-size: 12px;">[SEQ_PRECHAR][SEQNUM][DELIMITER]T[TOOL_NUM]</span><br />
+<span style="font-size: 12px;">...</span><br />
+<span style="font-size: 12px;">...</span></p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="ppg-tool-change-point" width="714" height="420" style="margin:0;width:714px;height:420px;border:none" src="ppg-tool-change-point.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">6.</span>If your controller expects to see an optional stop call BEFORE each tool change, you can add another line like below:<br />
+&nbsp;<br />
+<span style="font-size: 12px; color: #0000ff;">[SEQ_PRECHAR][SEQNUM][DELIMITER]G0 Z[TOOL_CHG_PT_Z]</span><br />
+<span style="font-size: 12px; color: #0000ff;">[SEQ_PRECHAR][SEQNUM][DELIMITER]G0 X[TOOL_CHG_PT_X] Y[TOOL_CHG_PT_Y]</span><br />
+<span style="font-size: 12px; color: #0000ff;">[SEQ_PRECHAR][SEQNUM][DELIMITER]M01</span><br />
+<span style="font-size: 12px;">[SEQ_PRECHAR][SEQNUM][DELIMITER]T[TOOL_NUM]</span><br />
+<span style="font-size: 12px;">...</span><br />
+<span style="font-size: 12px;">...</span><br />
+<span style="font-size: 12px;">&nbsp;</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">7.</span>From the <span class="f_BoldKeyword">Post Process Generator</span> dialog, pick <span class="f_BoldKeyword">Save As</span>.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">8.</span>Enter a unique name for your post file (<span class="f_BoldKeyword" style="font-style: italic;">*.spm</span>) for testing and pick <span class="f_BoldKeyword">Save</span>.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">9.</span>From the <span class="f_BoldKeyword">Set Post-Processor Options</span> dialog, select the revised post from the <span class="f_BoldKeyword">Current Post Processor</span> list.</p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="tool-change-point-post-selection" width="395" height="342" style="margin:0;width:395px;height:342px;border:none" src="tool-change-point-post-selection.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">10.</span><span style="font-weight: bold;">Note</span>: If you do not see your revised post in the list, select the &quot;...&quot; button to the right of the &quot;<span class="f_BoldKeyword">Folder where post-processor file are located</span>&quot; and select the folder where you saved your revised post file to (see <span class="f_BoldKeyword">Step 7</span> above) and pick <span class="f_BoldKeyword">OK</span>.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">11.</span>You should now see your revised post in the list. &nbsp;Select it and pick <span class="f_BoldKeyword">OK</span>.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">12.</span>Post a sample toolpath using the revised post.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">13.</span>Review the g-code test file and locate the first tool change lines of code. </p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">14.</span>Your sample test should look something like this depending on your post (based on the tool change point we used in <span class="f_BoldKeyword">Step 2</span> above). &nbsp;Note the tool change coordinates in blue:<br />
+&nbsp;<br />
+<span style="font-size: 12px; color: #0000ff;">...</span><br />
+<span style="font-size: 12px; color: #0000ff;">...</span><br />
+<span style="font-size: 12px; color: #0000ff;">N66 ;2 1/2 Axis Profiling</span><br />
+<span style="font-size: 12px; color: #0000ff;">N68 G0 Z0.</span><br />
+<span style="font-size: 12px; color: #0000ff;">N70 G0 X-4. Y0.</span><br />
+<span style="font-size: 12px; color: #0000ff;">N72 T1 M06</span><br />
+<span style="font-size: 12px; color: #0000ff;">...</span><br />
+<span style="font-size: 12px; color: #0000ff;">...</span><br />
+<span style="font-size: 12px; color: #0000ff;">&nbsp;</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">15.</span>That's it!</p></td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A6_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A6','TOGGLE0186A6_ICON')">For 4 Axis Output</a></span></td></tr></table></div><div id="TOGGLE0186A6" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="width:100%; border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Normal" style="display:inline-block;width:24px;margin-left:-24px">1.</span>From the <span class="f_BoldKeyword">Program</span> tab select <span class="f_BoldKeyword">4 Axis</span>.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Normal" style="display:inline-block;width:24px;margin-left:-24px">2.</span>From the <span class="f_BoldKeyword">4 Axis</span> menu select <span class="f_BoldKeyword">4 Axis Options</span>.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Normal" style="display:inline-block;width:24px;margin-left:-24px">3.</span>From the <span class="f_BoldKeyword">4 Axis Operation Options</span> dialog check the box to <span class="f_BoldKeyword">Always retract tool to Tool Change Point before each Table Rotate Operation</span>.</p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="cutting-tools-workbook-tool-change-point-4axis-2" width="454" height="193" style="margin:0;width:454px;height:193px;border:none" src="cutting-tools-workbook-tool-change-point-4axis-2.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Normal" style="display:inline-block;width:24px;margin-left:-24px">4.</span>Now from the <span class="f_BoldKeyword">Program</span> tab select <span class="f_BoldKeyword">Machine</span> and then <span class="f_BoldKeyword">Manual Definition</span>.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Normal" style="display:inline-block;width:24px;margin-left:-24px">5.</span>For the <span class="f_BoldKeyword">Machine Type</span> select <span class="f_BoldKeyword">4 Axis</span>.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Normal" style="display:inline-block;width:24px;margin-left:-24px">6.</span>Under <span class="f_BoldKeyword">General Parameters</span>, enter the X, Y and Z coordinate values for the <span class="f_BoldKeyword">Tool Change Point</span>.</p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="cutting-tools-workbook-tool-change-point-4axis-1" width="414" height="265" style="margin:0;width:414px;height:265px;border:none" src="cutting-tools-workbook-tool-change-point-4axis-1.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Normal" style="display:inline-block;width:24px;margin-left:-24px">7.</span>Then check the box to <span class="f_BoldKeyword">Output all coordinates in local Setup Coordinate System</span> and then pick <span class="f_BoldKeyword">OK</span> to close the dialog.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Normal" style="display:inline-block;width:24px;margin-left:-24px">8.</span>Post the <span class="f_BoldKeyword">4 Axis</span> toolpath operation and verify that the <span class="f_BoldKeyword">Tool Change Point</span> is being posted before the table rotation angle similar to this:<br />
+&nbsp;<br />
+<span style="font-size: 12px;">...</span><br />
+<span style="font-size: 12px;">...</span><br />
+<span style="font-size: 12px;">(Setup 2)</span><br />
+<span style="font-size: 12px;">N6263 </span><span style="font-size: 12px; color: #0000ff;">Z10.</span><br />
+<span style="font-size: 12px;">N6264 </span><span style="font-size: 12px; color: #0000ff;">X0.Y0.</span><br />
+<span style="font-size: 12px;">(Horizontal Roughing)</span><br />
+<span style="font-size: 12px;">N6265 </span><span style="font-size: 12px; color: #ff0000;">A180.</span><span style="font-size: 12px;">F300.</span><br />
+<span style="font-size: 12px;">...</span><br />
+<span style="font-size: 12px;">...</span></p></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A7_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A7','TOGGLE0186A7_ICON')">Posting Tool Comments</a></span></td></tr></table></div><div id="TOGGLE0186A7" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal">You can add comments associated with a <span class="f_BoldKeyword">Tool</span>. &nbsp;These <span class="f_BoldKeyword">Comments</span> are saved with the <span class="f_BoldKeyword">Tool</span> in your <span class="f_BoldKeyword">Tool Library</span>. &nbsp;They are also posted to your g-code when the tool is used. &nbsp;</p>
+<p class="p_Normal">Here are the steps to add <span class="f_BoldKeyword">Comments</span> to a <span class="f_BoldKeyword">Tool</span>:</p>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">1.</span><span class="f_Numbered">Edit the Tool using the </span><span class="f_BoldKeyword">Create/Select Tool</span><span class="f_Numbered"> dialog.</span></p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">2.</span><span class="f_Numbered">Select the </span><span class="f_BoldKeyword">Properties</span><span class="f_Numbered"> tab on the right.</span></p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="tool-comments-create-select-tools-dialog" width="696" height="433" style="margin:0;width:696px;height:433px;border:none" src="tool-comments-create-select-tools-dialog.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">3.</span><span class="f_Numbered">Add text to the </span><span class="f_BoldKeyword">Comments</span><span class="f_Numbered"> window.</span></p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="tool-comments-create-select-tools-dialog-2" width="215" height="404" style="margin:0;width:215px;height:404px;border:none" src="tool-comments-create-select-tools-dialog-2.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">4.</span><span class="f_Numbered">Make sure </span><span class="f_BoldKeyword">Comments</span><span class="f_Numbered"> are enabled in your post.</span></p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">A.</span>Click on <span class="f_BoldKeyword">Post</span> (<span class="f_BoldKeyword">Set Post-Processor Options</span>), then click <span class="f_BoldKeyword">Edit</span><span class="f_Numbered">.</span></p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="edit-post-menu-selection" width="593" height="345" style="margin:0;width:593px;height:345px;border:none" src="edit-post-menu-selection.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">B.</span>From the <span class="f_BoldKeyword">Post Processor Generator</span> dialog, select the <span class="f_BoldKeyword">General</span> tab from the left.</p><p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">C.</span>Check the box to <span class="f_BoldKeyword">Output Comments</span>. &nbsp;You can also change the start and end characters to use.</p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><img alt="tool-comments-ppg" width="618" height="363" style="margin:0;width:618px;height:363px;border:none" src="tool-comments-ppg.png"/></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">D.</span>Then pick <span class="f_BoldKeyword">Save</span> or <span class="f_BoldKeyword">Save As</span>.</p></td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">5.</span>Now post your operations and see your comments:</p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">...</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">...</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.5301 Y-0.7171 Z0.7480</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G3 X0.7801 Y-0.4671 I0.0000 J0.2500 F2.6</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.7801 Y-0.2171 Z0.7480 F6.9</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G0 Z0.9843</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G0 X0.7801 Y-0.2171 </span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">(2 1/2 Axis Profiling)</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #ff0000;">(My Tool Comments Here!)</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">S18000</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G0 Z0.9843</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G0 X0.5301 Y-0.7097 </span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.5301 Y-0.7097 Z0.7480 F6.9</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.5873 Y-0.7097 Z0.7480 F3.4</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.5873 Y-0.6345 Z0.7480</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.4729 Y-0.6345 Z0.7480</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">...</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">...</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Numbered" style="text-indent: 0; padding-left: 24px; margin-left: 24px;"><span class="f_Numbered" style="display:inline-block;width:24px;margin-left:-24px">6.</span>If you want to post g-codes instead of comments, just place a <span class="f_BoldKeyword">$</span> character prior to the comment in the <span class="f_BoldKeyword">Create/Select Tools</span> dialog. &nbsp;Adding <span class="f_BoldKeyword">$</span> as prefix will skip the comment start &amp; end characters in the posted code.</p><div style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 48px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p style="margin: 0 0 2px 0;"><img alt="tool-comments-create-select-tools-dialog-3" width="216" height="404" style="margin:0;width:216px;height:404px;border:none" src="tool-comments-create-select-tools-dialog-3.png"/></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">...</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">...</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.4655 Y-0.7171 Z0.7480</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.5301 Y-0.7171 Z0.7480</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G3 X0.7801 Y-0.4671 I0.0000 J0.2500 F2.6</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.7801 Y-0.2171 Z0.7480 F6.9</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G0 Z0.9843</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G0 X0.7801 Y-0.2171 </span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">(2 1/2 Axis Profiling)</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #ff0000;">My g-code Here!</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">S18000</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G0 Z0.9843</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G0 X0.5301 Y-0.7097 </span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.5301 Y-0.7097 Z0.7480 F6.9</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.5873 Y-0.7097 Z0.7480 F3.4</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">G1 X0.5873 Y-0.6345 Z0.7480</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">...</span></p>
+<p style="margin: 0 0 2px 0;"><span style="font-size: 13px; color: #0000ff;">...</span></p>
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0; padding: 0 0 0 0; margin: 0 0 8px 24px;"><table style="border:none;border-spacing:0;padding:0;line-height: normal;"><tr style="vertical-align:baseline"><td style="border:none;padding:0;width:32px"><img id="TOGGLE0186A8_ICON" class="dropdown-toggle-icon" alt="tog_minus" width="22" height="20" style="margin:0;width:22px;height:20px;border:none" src="tog_minus.gif"/></td><td style="border:none;padding:0"><span class="f_Heading2_atoc_"><a class="dropdown-toggle" style="font-style: normal; font-weight: bold; color: #1159aa; background-color: transparent; text-decoration: none;" href="javascript:HMToggle('toggle','TOGGLE0186A8','TOGGLE0186A8_ICON')">Related Topics</a></span></td></tr></table></div><div id="TOGGLE0186A8" class="dropdown-toggle-body" style="text-align: left; padding: 0 0 0 0; margin: 0 0 8px 56px;"><table style="border:none; border-spacing:0;">
+<tr>
+<td style="vertical-align:top; padding:0; border:none"><p class="p_Normal"><a href="html_help1ik4.html" class="topiclink">Post Processor File Browser</a></p>
+<p class="p_Normal"><a href="html_help2lki.html" class="topiclink">Main Editor</a></p>
+<p class="p_Normal"><a href="html_vardlglist.html" class="topiclink">Variable List Dialog</a></p>
+</td>
+</tr>
+</table>
+</div>
+
+<!--ZOOMSTOP-->
+</div></div>
+<script type="text/javascript">
+
+  $(document).ready(function(){
+    $(window).bind('resize', function() {
+      var y = $('#idheader').height(); 
+      $('#idcontent').css('margin-top', y);
+      var par = window.parent;
+      if ($( par ).width() <= $( window ).width()+20) {
+        $('#idheader').css('position', 'relative');
+        $('#idcontent').css('margin-top', 0);
+        $('#idbacktotop').css('display', 'block');
+        $('.hmanchor').css('margin-top', -20);
+	$('.hmanchor').css('padding-top', 20);
+      }
+      else {
+        $('#idheader').css('position', 'fixed');
+        $('#idcontent').css('margin-top', $('#idheader').height());
+        $('#idbacktotop').css('display', 'none');
+        $('.hmanchor').css('margin-top', -y-20);
+	$('.hmanchor').css('padding-top', y+20);
+      }
+    });
+    
+    $(window).resize(); //trigger event for initially small displays
+  });
+
+if ((!parent.hmNavigationFrame) && (parent.location) && (parent.location.href)) { $('.sync-toc').show();$('p.crumbs').hide();}
+
+</script>
+<script type="text/javascript">
+HMInitToggle('TOGGLE0186A1_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A1\',\'TOGGLE0186A1_ICON\')');
+HMInitToggle('TOGGLE0186A1','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A2_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A2\',\'TOGGLE0186A2_ICON\')');
+HMInitToggle('TOGGLE0186A2','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A3_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A3\',\'TOGGLE0186A3_ICON\')');
+HMInitToggle('TOGGLE0186A3','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A4_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A4\',\'TOGGLE0186A4_ICON\')');
+HMInitToggle('TOGGLE0186A4','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A5_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A5\',\'TOGGLE0186A5_ICON\')');
+HMInitToggle('TOGGLE0186A5','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A6_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A6\',\'TOGGLE0186A6_ICON\')');
+HMInitToggle('TOGGLE0186A6','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A7_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A7\',\'TOGGLE0186A7_ICON\')');
+HMInitToggle('TOGGLE0186A7','hm.type','dropdown','hm.state','0');
+HMInitToggle('TOGGLE0186A8_ICON','hm.type','dropdown','hm.state','0','hm.src0','tog_plus.gif','hm.src1','tog_minus.gif','onclick','HMToggle(\'toggle\',\'TOGGLE0186A8\',\'TOGGLE0186A8_ICON\')');
+HMInitToggle('TOGGLE0186A8','hm.type','dropdown','hm.state','0');
+</script>
+</body>
+</html>
